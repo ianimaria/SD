@@ -113,9 +113,6 @@ def TestSort(v):
     else:
         return "Sortarea nu este corecta"
 
-
-currentFuncName = lambda n=0: sys._getframe(n + 1).f_code.co_name
-
 f = open("input.txt", 'r')
 t = int(f.readline())
 sorts = [sorted, BubbleSort, CountSort, RadixSort, MergeSort, QuickSort]
@@ -147,3 +144,5 @@ for i in range(t):
                 print(sort.__name__, ":", round(end - start, 3), TestSort(s))
     else:
         print("Vectorul are toate elementele 0")
+        
+f.close()
